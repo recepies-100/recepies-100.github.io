@@ -57,3 +57,13 @@ export async function showHomeView(ctx) {
   updateNav();
   ctx.render(homeTemp(recepies));
 }
+
+const desc = document.querySelector('p.descriptio')
+
+
+function moreText() {
+
+  if (desc.length > 80) {
+    
+  }
+}

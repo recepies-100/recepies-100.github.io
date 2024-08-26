@@ -83,34 +83,41 @@
   color: #555;
   text-transform: capitalize;
   min-width: 20rem;
+  text-align: center;
 }
 
 .home-catalog__card {
   width: 100%;
   height: 15rem;
   display: flex;
-  column-gap: 2rem;
+  /* column-gap: 2rem; */
   margin: 2.5rem 0;
   align-items: center;
   box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.25);
   background-color: #fff;
   font-size: 1.6rem;
+  /* text-overflow: ellipsis; */
   
-  text-overflow: ellipsis;
-  word-wrap: wrap;
-
-  /* Required for text-overflow to do anything */
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 .home-img__card {
   height: 15rem;
   min-width:  30rem;
   object-fit: cover;
+  padding: 0.5rem;
+}
+
+.home-card {
+  padding: 0.8rem;
+  word-wrap: wrap;
+  /* Required for text-overflow to do anything */
+  white-space: wrap;
+  overflow: hidden;
 }
 
 p.description {
+  padding: 1rem;
+  overflow:scroll;
 }
 
 /* Home end */
