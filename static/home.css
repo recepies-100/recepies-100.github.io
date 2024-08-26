@@ -1,5 +1,17 @@
 
 /* Home start */
+
+/* logo-img */
+.logo-box {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+}
+.logo-img {
+  height: 6rem;
+  width: 100%;
+  display: block;
+}
 .home {
   padding:6rem 3rem;
   background-color: rgba(251, 249, 234, 0.948);

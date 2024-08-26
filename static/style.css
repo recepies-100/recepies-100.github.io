@@ -125,8 +125,6 @@ section {
 
 /* create page start */
 
-.create {
-}
 .create-heading {
   font-size: 5rem;
   color: orange;
@@ -163,6 +161,17 @@ textarea {
 }
 input:focus {
   color: #555;
+}
+
+.catalog-link {
+  color: #444;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.15rem;
+}
+.catalog-link:hover {
+  color: orange;
+  border-bottom: none;
 }
 
 #create-btn {

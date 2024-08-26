@@ -40,7 +40,7 @@ const homeCatalogTemp = (recepi) => html`
   <li class="home-catalog__card">
 
     <img class="home-img__card" src=${recepi.imageUrl} alt="omlette-img" />
-    <h2 class="home-catalog__heading"><a href="/details/${recepi.objectId}">${recepi.title}</a></h2>
+    <h2 class="home-catalog__heading"><a class="catalog-link" href="/details/${recepi.objectId}">${recepi.title}</a></h2>
     <div class="home-card">
       <p class="description">${recepi.description}</p>
     </div>
