@@ -1,0 +1,94 @@
+
+/* Home start */
+.home {
+  padding:6rem 3rem;
+  background-color: rgba(251, 249, 234, 0.948);
+  background-image:linear-gradient(to left, rgba(255, 255, 255, 0.034), rgba(255,255,255,0.7))  ,url('/images/cooking-in-teller.jpg');
+  background-position: 100% 0;
+  background-size: 40vw 50vh;
+  background-repeat: no-repeat;
+}
+
+.home-subheading {
+  font-size: 2.7rem;
+  color: #555;
+  margin-bottom: 3rem;
+}
+
+.home-heading {
+  color: orange;
+  font-size: 2rem;
+  width: 40%;
+  margin-bottom: 4rem;
+  text-align: left;
+  text-shadow: 0 0.2rem 1rem rgba(0,0,0,0.25);
+}
+
+.home-box {
+  padding-top: 1.2rem;
+  min-height: 5rem;
+  display: flex;
+  column-gap: 2rem;
+}
+
+/* .home-box *:hover {
+  color: chocolate;
+} */
+
+.home-catalog-link:link, .home-catalog-link:visited {
+  background-color: var(--bgc);
+  border: 2px solid var(--bgc);
+  padding: 1.3rem 2.5rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+
+}
+.home-catalog-link:active, .home-catalog-link:hover {
+  background-color: var(--bgc-dark);
+  border: 2px solid var(--bgc-dark);
+}
+.home-singuplink:link, .home-singuplink:visited {
+  background-color: transparent;
+  border: 2px solid var(--bgc);
+
+  color: var(--bgc);
+  padding: 1.3rem 2.5rem;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.home-singuplink:hover, .home-singuplink:active {
+  background-color: var(--bgc);
+  color: #fff;
+}
+/* HOME CATALOG */
+
+.home-catalog__heading {
+  color: #555;
+  text-transform: capitalize;
+  min-width: 20rem;
+}
+
+.home-catalog__card {
+  width: 100%;
+  height: 15rem;
+  display: flex;
+  column-gap: 4rem;
+  margin: 2.5rem 0;
+  align-items: center;
+  box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.25);
+  background-color: #fff;
+  font-size: 1.6rem;
+}
+
+.home-img__card {
+  height: 15rem;
+  min-width:  30rem;
+  object-fit: cover;
+}
+
+/* Home end */

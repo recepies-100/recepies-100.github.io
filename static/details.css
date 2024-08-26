@@ -1,0 +1,113 @@
+@import url(style.css);
+
+
+/* section Details start */
+.details {
+  background-color: #f3e4e4;
+}
+
+.details-container {
+  max-width: 73rem;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 3rem;
+  overflow: hidden;
+  padding: 4rem;
+  font-size: 1.6rem;
+}
+
+.details-container div {
+  padding-top: 3rem;
+}
+
+.details-img {
+  width: 100%;
+}
+.details-img {
+  max-height: 30rem;
+  object-fit: cover;
+  display: block;
+  border-radius: 2rem;
+}
+#details-title {
+  font-size: 4rem;
+  font-weight: 700;
+  padding: 3rem 0;
+  color: #444;
+}
+
+.details-preparation {
+  background-color: #ffe0fb96;
+  padding: 2rem;
+  border-radius: .8rem;
+}
+
+.details-title__sec {
+  font-size: 2.5rem;
+  color: #a1008bf1;;
+  margin-bottom: 2rem;
+}
+
+.time-list {
+  margin-left: 2rem;
+}
+
+.details-ingredients {
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #000;
+}
+
+#details-title__sec {
+  margin-bottom: 2rem;
+  color: #5a3b3b;
+}
+
+.ingredients-list,
+.instruction-list {
+  margin-left: 3rem;
+  
+}
+
+.instruction-list__item {
+  padding-left: 1.5rem;
+}
+.ingredients-list__item::marker,
+.instruction-list__item::marker {
+ 
+  color: #5a3b3b;
+  font-weight: 700;
+  
+}
+
+
+.details-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+#delete {
+  border: none;
+  align-self: flex-start;
+  padding: 0.7rem 1.2rem;
+  background-color: orange;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+#like {
+  border: none;
+  align-self: flex-start;
+  padding: 0.7rem 1.2rem;
+  background-color: rgb(249, 96, 121);
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+#delete:hover {
+  background-color: rgb(187, 121, 0);
+}
+
+
+
+
+/* section Details end */

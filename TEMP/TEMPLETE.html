@@ -1,0 +1,249 @@
+  <!-- home section -->
+  <section class="home">
+    <h3 class="home-subheading">Transform your meal prep</h3>
+    <h1 class="home-heading">
+      Own created reciepes and full catalog of all posted meals. You can
+      post your own reciepes. Go to catalog and see all posted reciepes, we
+      are sure you can find something for today meal.
+    </h1>
+
+    <div class="home-box">
+      <p class="link-box">
+        <a href="/catalog" class="home-catalog-link">view all reciepies &RightArrow;</a>
+      </p>
+      <p class="link-box">
+        <a href="/register" class="home-singuplink"> join us now! &RightArrow;</a>
+      </p>
+    </div>
+    <ul class="home-catalog">
+      <li class="home-catalog__card">
+        <img
+          class="home-img__card"
+          src="./images/omlette-teller-img.jpg"
+          alt="omlette-img"
+        />
+        <h2 class="home-catalog__heading">omlette</h2>
+        <div class="home-card">
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            iure illum impedit facilis enim quia id et perspiciatis, nostrum
+            dolor.
+          </p>
+        </div>
+      </li>
+      <li class="home-catalog__card">
+        <img
+          class="home-img__card"
+          src="./images/taco-img.jpg"
+          alt="omlette-img"
+        />
+        <h2 class="home-catalog__heading">taco</h2>
+        <div class="home-card">
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            iure illum impedit facilis enim quia id et perspiciatis, nostrum
+            dolor.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <!-- create section -->
+  <section class="create">
+    <h1 class="create-heading">Create your new reciepe!</h1>
+    <form id="create-form">
+      <h3 class="create-form__title">
+        Put your data here to create a new reciepe!
+      </h3>
+      <label for="imageUrl"
+        >Image:
+        <input
+          id="image"
+          type="text"
+          name="imageUrl"
+          placeholder="submit your image here"
+      /></label>
+      <label for="title"
+        >Title:
+        <input
+          id="title"
+          type="text"
+          name="title"
+          placeholder="write your reciepe title here"
+      /></label>
+      <label for="ingrediens"
+        >Ingrediens:
+        <input
+          id="ingrediens"
+          type="text"
+          name="ingrediens"
+          placeholder="put your ingrediens"
+      /></label>
+      <label for="description"
+        >desctiption:
+        <textarea
+          id="desctiption"
+          type="text"
+          name="description"
+          placeholder="description"
+        ></textarea>
+      </label>
+      <button id="create-btn" type="submit">Create new Reciepe</button>
+    </form>
+  </section>
+
+  <section class="edit">
+    <h1 class="edit-heading">Edit reciepe!</h1>
+    <form id="edit-form">
+      <h3 class="edit-form__title">
+        Put your data here to create a new reciepe!
+      </h3>
+      <label for="imageUrl"
+        >Image:
+        <input
+          id="image"
+          type="text"
+          name="imageUrl"
+          placeholder="submit your image here"
+      /></label>
+      <label for="title"
+        >Title:
+        <input
+          id="title"
+          type="text"
+          name="title"
+          placeholder="write your reciepe title here"
+      /></label>
+      <label for="ingrediens"
+        >Ingrediens:
+        <input
+          id="ingrediens"
+          type="text"
+          name="ingrediens"
+          placeholder="put your ingrediens"
+      /></label>
+      <label for="description"
+        >Ingrediens:
+        <textarea
+          id="desctiption"
+          type="text"
+          name="description"
+          placeholder="description"
+        ></textarea>
+      </label>
+      <div class="btn-box">
+        <button class="edit-btn" id="edit-btn" type="submit">edit</button>
+        <button class="edit-btn" id="delete-btn" type="submit">
+          delete
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <section class="catalog">
+    <h2 class="catalog-heading">All reciepes</h2>
+    <div class="cards-container">
+      <div class="card">
+        <img
+          src="./images/omlette-teller-img.jpg"
+          alt="omlette image in teller"
+          class="card-img"
+        />
+        <h2 class="card-title">omlette</h2>
+        <div class="card-body">
+          <!-- <div class="p card-gredients">
+            <ul>
+              <li>4eggs</li>
+            </ul>
+          </div> -->
+          <p class="card-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem vitae aperiam mollitia quod autem ipsa placeat
+            minus. Enim!
+          </p>
+          <button class="card-btn">view reciepe</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./images/taco-img.jpg" alt="taco-img" class="card-img" />
+        <h2 class="card-title">taco</h2>
+        <div class="card-body">
+          <!-- <div class="p card-gredients">
+            <ul>
+              <li>4eggs</li>
+            </ul>
+          </div> -->
+          <p class="card-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem vitae aperiam mollitia quod autem ipsa placeat
+            minus. Enim!
+          </p>
+          <button class="card-btn">view reciepe</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./images/pizza-img.jpg" class="card-img" />
+        <h2 class="card-title">pizza</h2>
+        <div class="card-body">
+          <!-- <div class="p card-gredients">
+            <ul>
+              <li>4eggs</li>
+            </ul>
+          </div> -->
+          <p class="card-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem vitae aperiam mollitia quod autem ipsa placeat
+            minus. Enim!
+          </p>
+          <button class="card-btn">view reciepe</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="details">
+    <div class="details-container">
+      <img class="details-img" src="./images/omlette-teller-img.jpg" alt="omlette-img">
+      <h2 id="details-title">Simple Omlette Reciepe</h2>
+      <div class="details-preparation">
+        <h4 class="details-title__sec">
+          Preparation Time
+        </h4>
+        <ul class="time-list">
+          <li class="time-list__item">
+            Aproximately time 30min
+          </li>
+          <li class="time-list__item">
+            Preparation 10min
+          </li>
+          <li class="time-list__item">
+            Cooking 35min
+          </li>
+        </ul>
+      </div>
+      <div class="details-ingredients">
+        <h2 id="details-title__sec">Ingrediens</h2>
+        <ul class="ingredients-list">
+          <li class="ingredients-list__item">3-4 eggs</li>
+          <li class="ingredients-list__item">salz & pfeffer</li>
+          <li class="ingredients-list__item">1 spoon butter or oil</li>
+          <li class="ingredients-list__item">optional feelng </li>
+        </ul>
+      </div>
+      <div class="details-instructions">
+        <h2 id="details-title__sec">Instructions</h2>
+        <ol class="instruction-list">
+          <li class="instruction-list__item">Beat the eggs</li>
+          <li class="instruction-list__item">Heat a pan</li>
+          <li class="instruction-list__item">Cook the Omlette</li>
+          <li class="instruction-list__item">Add fillings</li>
+          <li class="instruction-list__item">Fold and serve</li>
+          <li class="instruction-list__item">Enjoy</li>
+        </ol>
+      </div>
+      <div class="details-btns">
+        <button id="delete">Delete Reciepe</button>
+        <button id="like">Like</button>
+      </div>
+    </div>
+  </section>

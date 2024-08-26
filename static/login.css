@@ -1,0 +1,96 @@
+:root {
+  --bgc: #6a9a99;
+  --bgc-dark: #3a6c6b;
+  --temp-color-r: #feba32;
+  --temp-color-ligth: #ffdc95;
+}
+
+#login-wrapper {
+  background-color: #6a9a99;
+}
+
+.login-container {
+  display: flex;
+}
+.login-leftstaticside {
+  /* height: calc(100vh - 7rem); */
+  background-image: url("/images/strawbery-pic.jpg");
+  background-size: cover;
+  flex: 1 0 50%;
+}
+.regiser-leftstaticside {
+  /* height: calc(100vh - 7rem); */
+  background-image: url("/images/pancake.jpg");
+  background-size: cover;
+  flex: 1 0 50%;
+}
+.login-form__wrapper {
+  background-color: var(--temp-color-r);
+  flex: 1 0 50%;
+  padding: 3rem;
+}
+.login-form {
+  background-color: #fff;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+  max-width: 35rem;
+  /* height: 35rem; */
+  border-radius: 0.5rem;
+  margin: 4rem auto;
+  padding: 3rem;
+}
+
+.login-heading {
+  border-bottom: 1px solid #00000014;
+  display: flex;
+  padding-bottom: 1rem;
+  width: 100%;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--temp-color-r);
+}
+
+.login-submit__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  margin: 3rem 0;
+}
+
+.login-submit__form input {
+  padding: 1.2rem 2.2rem;
+  font-size: 1.5rem;
+  color: #666;
+}
+.login-btn {
+  font-size: 1.7rem;
+  border: none;
+  background-color: var(--bgc);
+  padding: 1.2rem 2.2rem;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s all;
+}
+
+.login-btn:hover {
+  background-color: var(--bgc-dark);
+}
+.footer-info {
+  text-align: center;
+}
+.footer-question {
+  color: whitesmoke;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.footer-link-to {
+  text-decoration: none;
+  color: var(--bgc);
+  font-size: 1.6rem;
+  font-weight: 500;
+  border-bottom: 1px solid var(--bgc);
+  padding: 0.2rem;
+}
+.footer-link-to:hover {
+  border-bottom: 1px solid transparent;
+}

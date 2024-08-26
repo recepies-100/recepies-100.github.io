@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "boxicons": "^2.1.4",
+    "lit-html": "^3.2.0",
+    "page": "^1.11.6"
+  },
+  "name": "my-project-start-from-zero",
+  "description": "and make some changes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
