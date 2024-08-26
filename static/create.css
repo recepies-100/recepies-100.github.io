@@ -1,0 +1,161 @@
+
+/* create page start */
+
+/* .create-heading {
+  font-size: 5rem;
+  color: orange;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  text-align: center;
+} */
+/* #create-form {
+  display: flex;
+  row-gap: 1.5rem;
+  flex-direction: column;
+  padding: 3rem;
+  margin: 0 auto;
+  max-width: 27rem;
+  box-shadow: 0 0.2rem 0.5rem rgb(0, 0, 0, 0.25);
+  background-color: rgba(255, 68, 0, 0.045);
+} */
+
+.create-form__title {
+  font-size: 1.7rem;
+  text-align: center;
+  color: #555;
+}
+label {
+  font-size: 1.6rem;
+  
+}
+input,
+textarea {
+  padding: 1rem 1rem;
+  width: 100%;
+  border: none;
+  border: 1px solid orange;
+  margin: 1rem 0rem;
+}
+input:focus {
+  color: #555;
+}
+
+.catalog-link {
+  color: #444;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.15rem;
+}
+.catalog-link:hover {
+  color: orange;
+  border-bottom: none;
+}
+
+#create-btn {
+  border: none;
+  align-self: flex-start;
+  padding: 0.7rem 1.2rem;
+  background-color: orange;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+#create-btn:hover {
+  background-color: rgb(187, 121, 0);
+}
+/* create page end */
+
+
+
+.create {
+  background-color: #6a9a99;
+}
+
+.create-container {
+  display: flex;
+  row-gap: 1rem ;
+}
+.create-leftstaticside {
+  /* height: calc(100vh - 7rem); */
+  background-image: url("/images/strawbery-pic.jpg");
+  background-size: cover;
+  flex: 1 0 50%;
+}
+.create-leftstaticside {
+  /* height: calc(100vh - 7rem); */
+  background-image: url("/images/pancake.jpg");
+  background-size: cover;
+  flex: 1 0 50%;
+}
+.login-form__wrapper {
+  background-color: var(--temp-color-r);
+  flex: 1 0 50%;
+  padding: 3rem;
+}
+#create-form{
+  background-color: #fff;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+  max-width: 35rem;
+  /* height: 35rem; */
+  border-radius: 0.5rem;
+  margin: 4rem auto;
+  padding: 3rem;
+}
+
+.create-heading {
+  border-bottom: 1px solid #00000014;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 1rem;
+  width: 100%;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--temp-color-r);
+}
+
+.create-submit__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  margin: 3rem 0;
+}
+
+.create-submit__form input {
+  padding: 1.2rem 2.2rem;
+  font-size: 1.5rem;
+  color: #666;
+}
+.create-btn {
+  font-size: 1.7rem;
+  border: none;
+  background-color: var(--bgc);
+  padding: 1.2rem 2.2rem;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s all;
+}
+
+.create-btn:hover {
+  background-color: var(--bgc-dark);
+}
+.footer-info {
+  text-align: center;
+}
+.footer-question {
+  color: whitesmoke;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.footer-link-to {
+  text-decoration: none;
+  color: var(--bgc);
+  font-size: 1.6rem;
+  font-weight: 500;
+  border-bottom: 1px solid var(--bgc);
+  padding: 0.2rem;
+}
+.footer-link-to:hover {
+  border-bottom: 1px solid transparent;
+}

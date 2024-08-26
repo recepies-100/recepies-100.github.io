@@ -1,6 +1,7 @@
 @import url(login.css);
 @import url(home.css);
 @import url(details.css);
+@import url(create.css);
 
 @font-face {
   font-family: "Outfit";
@@ -59,6 +60,7 @@ section {
 .card {
   width: 32rem;
   min-width: 32rem;
+  /* min-height: 30rem; */
   overflow: hidden;
   box-shadow: 0 0.1rem 0.25rem hsla(0, 0%, 0%, 0.329);
 }
@@ -103,6 +105,7 @@ section {
   font-size: 1.6rem;
   font-weight: 400;
   color: #555;
+  min-height: 16rem;
 }
 
 .card-btn {
@@ -123,70 +126,6 @@ section {
   box-shadow: 0 0.7rem 1.5rem rgba(177, 228, 177, 0.812);
 }
 
-/* create page start */
-
-.create-heading {
-  font-size: 5rem;
-  color: orange;
-  margin-bottom: 3rem;
-  font-weight: 700;
-}
-#create-form {
-  display: flex;
-  row-gap: 1.5rem;
-  flex-direction: column;
-  padding: 3rem;
-  margin: 0 auto;
-  max-width: 27rem;
-  box-shadow: 0 0.2rem 0.5rem rgb(0, 0, 0, 0.25);
-  background-color: rgba(255, 68, 0, 0.045);
-}
-
-.create-form__title {
-  font-size: 1.7rem;
-  text-align: center;
-  color: #555;
-}
-label {
-  font-size: 1.6rem;
-  margin-bottom: 0.5rem;
-}
-input,
-textarea {
-  padding: 0.6rem 1rem;
-  width: 100%;
-  border: none;
-  border: 1px solid orange;
-  margin-top: 0.3rem;
-}
-input:focus {
-  color: #555;
-}
-
-.catalog-link {
-  color: #444;
-  text-decoration: none;
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 0.15rem;
-}
-.catalog-link:hover {
-  color: orange;
-  border-bottom: none;
-}
-
-#create-btn {
-  border: none;
-  align-self: flex-start;
-  padding: 0.7rem 1.2rem;
-  background-color: orange;
-  color: whitesmoke;
-  cursor: pointer;
-}
-
-#create-btn:hover {
-  background-color: rgb(187, 121, 0);
-}
-/* create page end */
 
 /* edit page start */
 .edit {
