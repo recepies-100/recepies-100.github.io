@@ -36,14 +36,15 @@ const homeTemp = (recipies) => html`
 `;
 
 const homeCatalogTemp = (recepi) => html`
- 
   <li class="home-catalog__card">
-
     <img class="home-img__card" src=${recepi.imageUrl} alt="omlette-img" />
-    <h2 class="home-catalog__heading"><a class="catalog-link" href="/details/${recepi.objectId}">${recepi.title}</a></h2>
-    <div class="home-card">
-      <p class="description">${recepi.description}</p>
-    </div>
+    <h2 class="home-catalog__heading">
+      <a class="catalog-link" href="/details/${recepi.objectId}"
+        >${recepi.title}</a
+      >
+    </h2>
+
+    <p class="description">${recepi.description}</p>
   </li>
 `;
 
@@ -58,12 +59,9 @@ export async function showHomeView(ctx) {
   ctx.render(homeTemp(recepies));
 }
 
-const desc = document.querySelector('p.descriptio')
-
+const desc = document.querySelector("p.descriptio");
 
 function moreText() {
-
   if (desc.length > 80) {
-    
   }
 }
