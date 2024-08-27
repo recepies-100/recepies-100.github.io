@@ -255,3 +255,11 @@ section {
 
 }
 /* footer end */
+/* media quieries */
+@media (max-width:72em) {
+  body {
+    max-width: 100rem;
+    font-size: 60%;
+    padding: 0 1rem;
+  }
+}

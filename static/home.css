@@ -118,3 +118,27 @@ text-overflow: ellipsis;
 }
 
 /* Home end */
+
+/* media queries */
+
+@media (max-width:72em) {
+  .home {
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y:top ;
+    background-size: contain;
+
+  }
+}
+
+@media (max-width:59em) {
+  .home-catalog__card {
+    display: inline-block;
+  }
+  .home-catalog__heading {
+    
+    flex: 1;
+    order: 0;
+  }
+  
+}

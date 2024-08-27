@@ -2,14 +2,14 @@ import { getUserData } from "./storage.js";
 
 const host = "https://parseapi.back4app.com";
 const appId = "SOhOYWgCL87XL1dRmIJdGvGFcgMvOmO1aq1DB3Dz";
-const restKey = "p78vuJVCGESysNguvR3IRmdcYeCKIgvR5WiMDTA2";
+const jsKey = "BE0DWH8wS6Okow44rnuD9sKjgdCUgNToVZe2dpDf";
 
 export async function request(method, url, data) {
   const options = {
     method,
     headers: {
       "X-Parse-Application-Id": appId,
-      "X-Parse-REST-API-Key": restKey
+      "X-Parse-JavaScript-Key": jsKey
     }
   };
 
@@ -44,4 +44,4 @@ export async function request(method, url, data) {
 export const get = (url) => request("GET", url);
 export const post = (url, data) => request("POST", url, data);
 export const put = (url, data) => request("PUT", url, data);
-export const del = (url) => request("DELETE", url);
+export const del = (url) => request("delete", url);
