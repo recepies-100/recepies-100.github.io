@@ -8,6 +8,7 @@ import { showCatalogView } from "../views/showCatalog.js";
 import { updateNav } from "../middlewares/navigation.js";
 import { showCreateView } from "../views/createView.js";
 import { showDetailsView } from "../views/detailView.js";
+import { showEditView } from "../views/editView.js";
 
 const root = document.querySelector("main");
 
@@ -22,6 +23,7 @@ page("/logout", logoutView);
 page("/catalog", showCatalogView);
 page("/create", showCreateView);
 page("/details/:id", showDetailsView);
+page("/edit/:id", showEditView);
 page.start();
 
 const menu = document.querySelector(".hamburger");

@@ -28,8 +28,11 @@ const detailsTemp = (data, onDelete) => html`
         </ul>
       </div>
       <div class="details-btns">
-        <button @click=${onDelete} id="delete">Delete Reciepe</button>
-        <button id="like">Like</button>
+        <a href='/edit/${data.objectId}' id="edit-btn">
+          Edit Reciepe
+</a>
+        <a @click=${onDelete} href='javascript:void(0)' id="delete-btn">Delete Reciepe</a>
+        <a id="like">Like</a>
       </div>
     </div>
   </section>
@@ -39,16 +42,11 @@ export async function showDetailsView(ctx) {
   const id = ctx.params.id;
   const data = await getReciepeById(id);
 
-  
-
   ctx.render(detailsTemp(data, onDelete));
-  
+
   async function onDelete() {
-    
-    
-     await deleteReciepe(id);
-  
-  
+    await deleteReciepe(id);
+
     page.redirect("/catalog");
   }
 }

@@ -1,4 +1,4 @@
-import { del, get, post } from "../src/api.js";
+import { del, get, post, put } from "../src/api.js";
 
 const endpoints = {
   getAllRecepies: "/classes/Recepi",
@@ -29,9 +29,15 @@ export async function getReciepeById(id) {
 }
 
 export async function deleteReciepe(id) {
-  return await del(endpoints.delRecepiById + {
-    className: 'Recepi',
-    _objCount: 1,
-    id: `${id}`
-  });
+  return await del(endpoints.delRecepiById + id);
+}
+
+export async function updateRecepi(id, {imageUrl,
+  title,
+  ingrediance,
+  description}) {
+  return await put(endpoints.getReciepeById + id, {imageUrl,
+    title,
+    ingrediance,
+    description})
 }

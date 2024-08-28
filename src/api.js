@@ -2,14 +2,14 @@ import { getUserData } from "./storage.js";
 
 const host = "https://parseapi.back4app.com";
 const appId = "SOhOYWgCL87XL1dRmIJdGvGFcgMvOmO1aq1DB3Dz";
-const jsKey = "BE0DWH8wS6Okow44rnuD9sKjgdCUgNToVZe2dpDf";
+const apiKey = "p78vuJVCGESysNguvR3IRmdcYeCKIgvR5WiMDTA2";
 
 export async function request(method, url, data) {
   const options = {
     method,
     headers: {
       "X-Parse-Application-Id": appId,
-      "X-Parse-JavaScript-Key": jsKey
+      "X-Parse-REST-API-Key": apiKey
     }
   };
 

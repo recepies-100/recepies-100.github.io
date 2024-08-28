@@ -87,7 +87,7 @@
   justify-content: space-between;
 }
 
-#delete {
+#edit-btn, #delete-btn {
   border: none;
   align-self: flex-start;
   padding: 0.7rem 1.2rem;
