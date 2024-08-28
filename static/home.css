@@ -230,6 +230,7 @@ p.description {
  }
 
  .home-img__card {
+  display: none;
   width: 100%;
 }
 
