@@ -206,8 +206,10 @@ p.description {
     font-size: 45%;
   }
 
+  
+
   .home {
-    padding: 3rem 2rem;
+    padding: 3rem 1rem;
   }
 
   .home-subheading {
@@ -228,6 +230,11 @@ p.description {
  }
 
  .home-img__card {
+  width: 100%;
+}
+
+.home-catalog__card {
+  margin: 1rem 0;
   width: 100%;
 }
 }
