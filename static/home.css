@@ -1,4 +1,3 @@
-
 /* Home start */
 
 /* logo-img */
@@ -13,9 +12,14 @@
   display: block;
 }
 .home {
-  padding:6rem 3rem;
+  padding: 6rem 3rem;
   background-color: rgba(251, 249, 234, 0.948);
-  background-image:linear-gradient(to left, rgba(255, 255, 255, 0.034), rgba(255,255,255,0.7))  ,url('/images/cooking-in-teller.jpg');
+  background-image: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0.034),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("/images/cooking-in-teller.jpg");
   background-position: 100% 0;
   background-size: 40vw 50vh;
   background-repeat: no-repeat;
@@ -33,7 +37,7 @@
   width: 40%;
   margin-bottom: 4rem;
   text-align: left;
-  text-shadow: 0 0.2rem 1rem rgba(0,0,0,0.25);
+  text-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.25);
 }
 
 .home-box {
@@ -47,7 +51,8 @@
   color: chocolate;
 } */
 
-.home-catalog-link:link, .home-catalog-link:visited {
+.home-catalog-link:link,
+.home-catalog-link:visited {
   background-color: var(--bgc);
   border: 2px solid var(--bgc);
   padding: 1.3rem 2.5rem;
@@ -57,13 +62,14 @@
   color: #fff;
   text-decoration: none;
   transition: all 0.3s;
-
 }
-.home-catalog-link:active, .home-catalog-link:hover {
+.home-catalog-link:active,
+.home-catalog-link:hover {
   background-color: var(--bgc-dark);
   border: 2px solid var(--bgc-dark);
 }
-.home-singuplink:link, .home-singuplink:visited {
+.home-singuplink:link,
+.home-singuplink:visited {
   background-color: transparent;
   border: 2px solid var(--bgc);
 
@@ -73,7 +79,8 @@
   transition: all 0.3s;
 }
 
-.home-singuplink:hover, .home-singuplink:active {
+.home-singuplink:hover,
+.home-singuplink:active {
   background-color: var(--bgc);
   color: #fff;
 }
@@ -88,57 +95,132 @@
 
 .home-catalog__card {
   width: 100%;
-  min-height: 15rem;
-  display: flex;
+  height: max-content;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   /* column-gap: 2rem; */
   margin: 2.5rem 0;
   align-items: center;
-  box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.25);
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.25);
   background-color: #fff;
   font-size: 1.6rem;
   /* text-overflow: ellipsis; */
-  
 }
 
 .home-img__card {
   height: 17rem;
-  min-width:  30rem;
+  min-width: 30rem;
   object-fit: cover;
-
 }
 
 p.description {
-
-  overflow:hidden;
+  overflow: hidden;
   word-wrap: break-word;
-white-space: wrap;
-word-break: break-word;
-padding: 0.5rem;
-text-overflow: ellipsis;
+  white-space: wrap;
+  word-break: break-word;
+  padding: 0.5rem;
+  text-overflow: ellipsis;
 }
 
 /* Home end */
 
 /* media queries */
 
-@media (max-width:72em) {
+@media (max-width: 72em) {
   .home {
-  background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y:top ;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: top;
     background-size: contain;
-
+  }
+  .home-singuplink:link,
+  .home-singuplink:visited {
+    background-color: #ffffffaa;
   }
 }
 
-@media (max-width:59em) {
+@media (max-width: 59em) {
   .home-catalog__card {
-    display: inline-block;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    grid-template-rows: min-content, 1fr;
   }
   .home-catalog__heading {
-    
-    flex: 1;
-    order: 0;
+    width: 100%;
+    order: -1;
+    grid-column: 1/-1;
   }
-  
+  .home-img__card {
+    order: 1;
+    grid-column: 1/2;
+  }
+  p.description {
+    order: 3;
+    grid-column: 2/-1;
+  }
+}
+
+@media (max-width: 46em) {
+  html {
+    font-size: 52%;
+  }
+
+  .home-heading {
+    width: 70%;
+  }
+
+  .home-catalog__card {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content, 1fr, 1fr;
+
+    justify-items: center;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  .home-catalog__heading {
+    margin-bottom: 1rem;
+    width: 100%;
+    order: -1;
+    grid-column: 1/-1;
+  }
+  .home-img__card {
+    width: 80%;
+    order: 1;
+    grid-column: 1/-1;
+  }
+  p.description {
+    order: 3;
+    grid-column: 1/-1;
+  }
+}
+
+@media (max-width: 46em) {
+  html {
+    font-size: 45%;
+  }
+
+  .home {
+    padding: 3rem 2rem;
+  }
+
+  .home-subheading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .home-heading {
+    font-size: 1.8rem;
+    width: 90%;
+    margin-bottom: 3rem;
+  }
+
+  .home-catalog-link:link,
+.home-catalog-link:visited,  .home-singuplink:link,
+.home-singuplink:visited {
+  padding: .8rem 1rem;
+ }
+
+ .home-img__card {
+  width: 100%;
+}
 }

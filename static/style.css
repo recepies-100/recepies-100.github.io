@@ -8,9 +8,8 @@
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  src: url("../static/fonts/Outfit-VariableFont_wght.ttf") format("truetype")
+  src: url("../static/fonts/Outfit-VariableFont_wght.ttf") format("truetype");
 }
-
 
 * {
   margin: 0;
@@ -32,7 +31,6 @@ section {
   padding: 9rem 0;
 }
 
-
 /* CATALOG */
 
 .catalog {
@@ -53,14 +51,14 @@ section {
   justify-content: space-between;
   flex-wrap: wrap;
   text-align: center;
-  row-gap: 4rem ;
+  row-gap: 4rem;
   column-gap: 4rem;
 }
 
 .card {
   width: 32rem;
   min-width: 32rem;
-  /* min-height: 30rem; */
+  height: fit-content;
   overflow: hidden;
   box-shadow: 0 0.1rem 0.25rem hsla(0, 0%, 0%, 0.329);
 }
@@ -126,11 +124,14 @@ section {
   box-shadow: 0 0.7rem 1.5rem rgba(177, 228, 177, 0.812);
 }
 
-
 /* edit page start */
 .edit {
-
-  background-image: linear-gradient(to right bottom, rgba(0,0,0,.25), rgba(0,0,0,0.25)), url('/images/watermelon-pic.jpg');
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.25)
+    ),
+    url("/images/watermelon-pic.jpg");
   background-position: 0 0;
   background-size: cover;
 }
@@ -150,7 +151,7 @@ section {
   margin: 0 auto;
   max-width: 27rem;
   box-shadow: 0 0.2rem 0.5rem rgb(0, 0, 0, 0.25);
-  background-color: whitesmoke
+  background-color: whitesmoke;
 }
 
 .edit-form__title {
@@ -187,16 +188,18 @@ section {
 
 /* edit page end */
 
-
 /* header & navigation  start*/
 .header {
   height: 7rem;
   border-bottom: 1px solid transparent;
-  box-shadow: 0 0.5rem 0 rgba(0,0,0,0.25);
+  box-shadow: 0 0.5rem 0 rgba(0, 0, 0, 0.25);
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.5;
+}
 
+.hamburger {
+  display: none;
 }
 
 .navigation {
@@ -212,10 +215,11 @@ section {
   font-weight: 700;
   color: #444;
   text-transform: uppercase;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
-.nav-logo:hover, .nav-logo:active {
+.nav-logo:hover,
+.nav-logo:active {
   color: orange;
 }
 
@@ -228,14 +232,15 @@ section {
   font-weight: 700;
   color: #444;
   text-transform: uppercase;
-
 }
 
-.nav-box *:hover, .nav-box *:active {
+.nav-box *:hover,
+.nav-box *:active {
   color: orange;
 }
 
-#gueat-nav, #user-nav {
+#gueat-nav,
+#user-nav {
   display: flex;
   column-gap: 3rem;
 }
@@ -251,15 +256,78 @@ section {
   justify-content: space-between;
   padding: 5rem 0;
   height: 8rem;
-  width:  100%;
-
+  width: 100%;
 }
 /* footer end */
 /* media quieries */
-@media (max-width:72em) {
+@media (max-width: 72em) {
   body {
     max-width: 100rem;
     font-size: 60%;
     padding: 0 1rem;
   }
+}
+
+@media (max-width: 46em) {
+  .navigation {
+  }
+
+  .nav-box {
+    display: none;
+    position: absolute;
+    top: 7rem;
+    width: 100%;
+    text-align: center;
+    height: min-content;
+    right: 0;
+    background-color: var(--bgc);
+    justify-self: self-end;
+    padding: 3rem;
+  }
+  .nav-box * {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .hamburger {
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--bgc-op);
+    position: absolute;
+    top: 50%;
+    transition: all ease-in-out 0.3s;
+  }
+  .hamburger span:first-child {
+    top: 28%;
+  }
+  .hamburger span:last-child {
+    top: 72%;
+  }
+
+  .hamburger.open span:first-child {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  .hamburger.open span:nth-child(2) {
+    display: none;
+  }
+  .hamburger.open span:last-child {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: 26.35em) { 
+  html {
+    font-size: 38%;
+  }
+
 }
