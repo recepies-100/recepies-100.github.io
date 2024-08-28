@@ -95,3 +95,20 @@
 .footer-link-to:hover {
   border-bottom: 1px solid transparent;
 }
+
+
+/* media queries  */
+
+@media (max-width:50em) {
+  .login-container {
+    flex-direction: column;
+  }
+  .login-leftstaticside {
+    min-height: 7rem;
+  }
+
+  .regiser-leftstaticside {
+    min-height: 7rem;
+    background-position: 0 center;
+  }
+}
