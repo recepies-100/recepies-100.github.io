@@ -166,10 +166,7 @@ p.description {
   }
 
   .logo-img {
-    height: 3.5rem;
-    width: 100%;
-    display: block;
-    object-fit: cover;
+   display: none;
   }
 
   .home-heading {
