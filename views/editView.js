@@ -26,12 +26,12 @@ const editTemp = (postData, onEdit) => html`
           placeholder="write your reciepe title here"
           .value=${postData.title}
       /></label>
-      <label for="ingrediens"
+      <label for="ingrediance"
         >Ingrediens:
         <input
-          id="ingrediens"
+          id="ingrediance"
           type="text"
-          name="ingrediens"
+          name="ingrediance"
           placeholder="put your ingrediens"
           .value=${postData.ingrediance}
       /></label>
@@ -73,14 +73,14 @@ export async function showEditView(ctx) {
   async function onEdit({
     imageUrl,
     title,
-    ingrediens,
+    ingrediance,
     description,
     prepTime
   }) {
     await updateRecepi(id, {
       imageUrl,
       title,
-      ingrediens,
+      ingrediance,
       description,
       prepTime
     });
