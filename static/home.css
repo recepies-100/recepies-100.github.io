@@ -165,6 +165,13 @@ p.description {
     font-size: 52%;
   }
 
+  .logo-img {
+    height: 3.5rem;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
   .home-heading {
     width: 70%;
   }
