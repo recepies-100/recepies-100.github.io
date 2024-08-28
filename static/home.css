@@ -174,6 +174,8 @@ p.description {
 
   .home-heading {
     width: 70%;
+    background-color: #ffffffd1;
+    padding: .5rem;
   }
 
   .home-catalog__card {
@@ -206,8 +208,6 @@ p.description {
     font-size: 45%;
   }
 
-  
-
   .home {
     padding: 3rem 1rem;
   }
@@ -224,18 +224,19 @@ p.description {
   }
 
   .home-catalog-link:link,
-.home-catalog-link:visited,  .home-singuplink:link,
-.home-singuplink:visited {
-  padding: .8rem 1rem;
- }
+  .home-catalog-link:visited,
+  .home-singuplink:link,
+  .home-singuplink:visited {
+    padding: 0.8rem 1rem;
+  }
 
- .home-img__card {
-  display: none;
-  width: 100%;
-}
+  .home-img__card {
+    width: 100%;
+  }
 
-.home-catalog__card {
-  margin: 1rem 0;
-  width: 100%;
-}
+  .home-catalog__card {
+    margin: 1rem 0;
+    padding: 0;
+    width: 100%;
+  }
 }
