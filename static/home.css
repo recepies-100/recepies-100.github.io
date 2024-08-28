@@ -91,19 +91,22 @@
   text-transform: capitalize;
   min-width: 20rem;
   text-align: center;
+  border-right: 1px solid var(--bgc);
+  height: 80%;
 }
 
 .home-catalog__card {
   width: 100%;
   height: max-content;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto min-content 1fr;
   /* column-gap: 2rem; */
   margin: 2.5rem 0;
   align-items: center;
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.25);
   background-color: #fff;
   font-size: 1.6rem;
+  color: #666;
   /* text-overflow: ellipsis; */
 }
 
@@ -120,6 +123,8 @@ p.description {
   word-break: break-word;
   padding: 0.5rem;
   text-overflow: ellipsis;
+  
+  
 }
 
 /* Home end */
@@ -137,6 +142,11 @@ p.description {
   .home-singuplink:visited {
     background-color: #ffffffaa;
   }
+
+  .home-singuplink:hover,
+  .home-singuplink:active {
+    background-color: var(--bgc);
+  } 
 }
 
 @media (max-width: 59em) {
