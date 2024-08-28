@@ -10,9 +10,8 @@ const detailsTemp = (data, onDelete) => html`
       <div class="details-preparation">
         <h4 class="details-title__sec">Preparation Time</h4>
         <ul class="time-list">
-          <li class="time-list__item">Aproximately time 30min</li>
-          <li class="time-list__item">Preparation 10min</li>
-          <li class="time-list__item">Cooking 35min</li>
+          <li class="time-list__item">${data.prepTime}</li>
+          
         </ul>
       </div>
       <div class="details-ingredients">

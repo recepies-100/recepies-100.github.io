@@ -3,6 +3,7 @@
 @import url(details.css);
 @import url(create.css);
 @import url(catalog.css);
+@import url(edit.css);
 
 @font-face {
   font-family: "Outfit";
@@ -47,69 +48,7 @@ section {
 }
 
 
-/* edit page start */
-.edit {
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(0, 0, 0, 0.25),
-      rgba(0, 0, 0, 0.25)
-    ),
-    url("/images/watermelon-pic.jpg");
-  background-position: 0 0;
-  background-size: cover;
-}
-.edit-heading {
-  font-size: 5rem;
-  color: orange;
-  margin-bottom: 3rem;
-  font-weight: 700;
-  text-shadow: 0 0.2rem 0.5rem black;
-}
 
-#edit-form {
-  display: flex;
-  row-gap: 1.5rem;
-  flex-direction: column;
-  padding: 3rem;
-  margin: 0 auto;
-  max-width: 27rem;
-  box-shadow: 0 0.2rem 0.5rem rgb(0, 0, 0, 0.25);
-  background-color: whitesmoke;
-}
-
-.edit-form__title {
-  font-size: 1.7rem;
-  text-align: center;
-  color: #555;
-}
-
-.btn-box {
-  display: flex;
-  justify-content: space-between;
-}
-
-.edit-btn {
-  border: none;
-  align-self: flex-start;
-  padding: 0.7rem 1.2rem;
-  background-color: orange;
-  color: whitesmoke;
-  cursor: pointer;
-}
-
-.edit-btn:hover {
-  background-color: rgb(187, 121, 0);
-}
-
-#delete-btn {
-  background-color: crimson;
-}
-
-#delete-btn:hover {
-  background-color: red;
-}
-
-/* edit page end */
 
 /* header & navigation  start*/
 .header {
@@ -154,8 +93,9 @@ section {
 }
 .nav-box * {
   text-decoration: none;
+
   font-weight: 700;
-  color: #444;
+  color: #666;
   text-transform: uppercase;
 }
 

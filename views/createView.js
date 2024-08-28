@@ -1,10 +1,10 @@
 import { html } from "@lit-html";
-import  page  from "@page";
+import page from "@page";
 import { createSubmitHandler } from "../middlewares/submithandler.js";
 import { createRecepi } from "../data/dataService.js";
 
-const createTemp = (onCreate) => html `
-   <section class="create">
+const createTemp = (onCreate) => html`
+  <section class="create">
     <h1 class="create-heading">Create your new reciepe!</h1>
     <form @submit=${onCreate} id="create-form">
       <h3 class="create-form__title">
@@ -43,17 +43,31 @@ const createTemp = (onCreate) => html `
           placeholder="description"
         ></textarea>
       </label>
+
+      <label for="preparation-time"
+        >Preparation Time in Minutes:
+        <input
+          id="prep-time"
+          type="text"
+          name="prepTime"
+          placeholder="write down preparation time"
+      /></label>
       <button id="create-btn" type="submit">Create new Reciepe</button>
     </form>
   </section>
-`
+`;
 
 export function showCreateView(ctx) {
   ctx.render(createTemp(createSubmitHandler(onCreate)));
 
-  async function onCreate({imageUrl, title, ingrediance, description}) {
-      await createRecepi({imageUrl, title, ingrediance, description})
-      page.redirect('/catalog');
+  async function onCreate({
+    imageUrl,
+    title,
+    ingrediance,
+    description,
+    prepTime
+  }) {
+    await createRecepi({ imageUrl, title, ingrediance, description, prepTime });
+    page.redirect("/catalog");
   }
-
 }

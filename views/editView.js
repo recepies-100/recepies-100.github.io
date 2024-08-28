@@ -1,6 +1,6 @@
 import { html } from "@lit-html";
 import page from "@page";
-import {  getReciepeById, updateRecepi } from "../data/dataService.js";
+import { getReciepeById, updateRecepi } from "../data/dataService.js";
 import { createSubmitHandler } from "../middlewares/submithandler.js";
 
 const editTemp = (postData, onEdit) => html`
@@ -38,6 +38,8 @@ const editTemp = (postData, onEdit) => html`
       <label for="description"
         >description:
         <textarea
+          cols="30"
+          rows="10"
           id="desctiption"
           type="text"
           name="description"
@@ -45,6 +47,15 @@ const editTemp = (postData, onEdit) => html`
           .value=${postData.description}
         ></textarea>
       </label>
+      <label for="prep-time"
+        >Preparation Time in Minutes:
+        <input
+          id="prep-time"
+          type="text"
+          name="prepTime"
+          placeholder="Preparation Time"
+          .value=${postData.prepTime}
+      /></label>
       <div class="btn-box">
         <button class="edit-btn" id="edit-btn" type="submit">edit</button>
         <button class="cancel-btn" id="cancel-btn" type="submit">cancel</button>
@@ -59,10 +70,21 @@ export async function showEditView(ctx) {
 
   ctx.render(editTemp(postData, createSubmitHandler(onEdit)));
 
-  async function onEdit({ imageUrl, title, ingrediance, description }) {
+  async function onEdit({
+    imageUrl,
+    title,
+    ingrediens,
+    description,
+    prepTime
+  }) {
+    await updateRecepi(id, {
+      imageUrl,
+      title,
+      ingrediens,
+      description,
+      prepTime
+    });
 
-    await updateRecepi(id, {imageUrl, title, ingrediance, description});
-
-    page.redirect('/catalog')
+    page.redirect("/catalog");
   }
 }
