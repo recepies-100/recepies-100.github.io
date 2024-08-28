@@ -188,12 +188,19 @@ section {
 @media (max-width: 72em) {
   body {
     max-width: 100rem;
-    font-size: 60%;
     padding: 0 1rem;
   }
 }
 
 @media (max-width: 46em) {
+
+  body {
+    padding: 0;
+  }
+
+  .navigation {
+    padding:0 1.5rem;
+  }
 
   .nav-box {
     display: none;
