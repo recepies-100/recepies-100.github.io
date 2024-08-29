@@ -1,8 +1,9 @@
 import { html } from "@lit-html";
 import { updateNav } from "../middlewares/navigation.js";
 import { getAllRecepies } from "../data/dataService.js";
+import { getUserData } from "../src/storage.js";
 
-const homeTemp = (recipies) => html`
+const homeTemp = (userData, recipies) => html`
   <!-- home section -->
   <section class="home">
     <h3 class="home-subheading">Transform your meal prep</h3>
@@ -19,9 +20,11 @@ const homeTemp = (recipies) => html`
         >
       </p>
       <p class="link-box">
-        <a href="/register" class="home-singuplink">
-          join us now! &RightArrow;</a
-        >
+        ${!userData
+          ? html`<a href="/register" class="home-singuplink">
+              join us now! &RightArrow;
+            </a>`
+          : null}
       </p>
     </div>
     <ul class="home-catalog">
@@ -55,8 +58,8 @@ export async function showHomeView(ctx) {
     (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
   );
 
+  const userData = await getUserData();
+
   updateNav();
-  ctx.render(homeTemp(recepies));
+  ctx.render(homeTemp(Boolean(userData), recepies));
 }
-
-
