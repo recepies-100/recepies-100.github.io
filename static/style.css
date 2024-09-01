@@ -17,14 +17,16 @@
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  src: url("../static/fonts/static/RobotoCondensed-VariableFont_wght.ttf") format("truetype");
+  src: url("../static/fonts/static/RobotoCondensed-VariableFont_wght.ttf")
+    format("truetype");
 }
 @font-face {
   font-family: "RobotoCondensed";
-  font-style: italick;
+  font-style: italic;
   font-weight: 100 900;
   font-display: swap;
-  src: url("../static/fonts/static/RobotoCondensed-VariableFont_wght.ttf") format("truetype");
+  src: url("../static/fonts/static/RobotoCondensed-VariableFont_wght.ttf")
+    format("truetype");
 }
 
 * {
@@ -46,9 +48,6 @@ body {
 section {
   padding: 9rem 0;
 }
-
-
-
 
 /* header & navigation  start*/
 .header {
@@ -129,7 +128,6 @@ section {
 .footer-nav__box {
   display: flex;
   flex-direction: column;
-
 }
 .footer-nav__box * {
   color: #444;
@@ -147,13 +145,12 @@ section {
 }
 
 @media (max-width: 46em) {
-
   body {
     padding: 0;
   }
 
   .navigation {
-    padding:0 1.5rem;
+    padding: 0 1.5rem;
   }
 
   .nav-box {
@@ -209,9 +206,12 @@ section {
   }
 }
 
-@media (max-width: 26.35em) { 
+@media (max-width: 26.35em) {
   html {
     font-size: 38%;
   }
 
+  .hamburger span {
+    height: 2.5px;
+  }
 }

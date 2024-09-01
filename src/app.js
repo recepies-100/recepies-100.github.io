@@ -33,9 +33,19 @@ menu.addEventListener("click", onclick);
 
 function onclick(e) {
 
+
   menu.classList.toggle("open");
 
 
 
-  navBox.style.display === 'block' ?  navBox.style.display = 'none' :  navBox.style.display = 'block'
+  navBox.style.display === 'block' ?  navBox.style.display = 'none' :  navBox.style.display = 'block';
+
+
+  e.target.parentElement.parentElement.querySelectorAll('a').forEach(element => {
+    element.addEventListener('click', () => {
+      menu.classList.remove("open");
+      navBox.style.display = 'none'
+      return element
+    })
+  });
 }
