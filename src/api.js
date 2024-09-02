@@ -28,7 +28,7 @@ export async function request(method, url, data) {
     if (!response.ok) {
       const err = await response.json();
 
-      alert(err)
+      alert(err.error)
     }
     if (response.status === 204) {
       return response;
