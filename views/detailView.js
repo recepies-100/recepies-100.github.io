@@ -11,7 +11,6 @@ const detailsTemp = (data, onDelete) => html`
         <h4 class="details-title__sec">Preparation Time</h4>
         <ul class="time-list">
           <li class="time-list__item">${data.prepTime}</li>
-          
         </ul>
       </div>
       <div class="details-ingredients">
@@ -27,10 +26,10 @@ const detailsTemp = (data, onDelete) => html`
         </ul>
       </div>
       <div class="details-btns">
-        <a href='/edit/${data.objectId}' id="edit-btn">
-          Edit Reciepe
-</a>
-        <a @click=${onDelete} href='javascript:void(0)' id="delete-btn">Delete Reciepe</a>
+        <a href="/edit/${data.objectId}" id="edit-btn"> Edit Reciepe </a>
+        <a @click=${onDelete} href="javascript:void(0)" id="delete-btn"
+          >Delete Reciepe</a
+        >
         <a id="like">Like</a>
       </div>
     </div>
@@ -44,7 +43,15 @@ export async function showDetailsView(ctx) {
   ctx.render(detailsTemp(data, onDelete));
 
   async function onDelete() {
-    await deleteReciepe(id);
+    const confirmation = confirm(
+      "Are you sure you want to delete this reciep?"
+    );
+
+    if (!confirmation) {
+      return;
+    } else {
+      await deleteReciepe(id);
+    }
 
     page.redirect("/catalog");
   }
