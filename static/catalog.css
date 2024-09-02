@@ -73,14 +73,34 @@
   min-height: 16rem;
 }
 
+.card-likes{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.link-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.likes-result {
+  font-size: 1.6rem;
+  color: orange;
+}
+.likes-result span{
+  font-size: 1.6rem;
+  color: #666;
+}
+
 .card-btn {
   border: none;
+  display: inline-block;
   font-size: 1.4rem;
-
   padding: 1rem 2rem;
-  margin-top: 2rem;
   background-color: rgba(177, 228, 177, 0.812);
-  align-self: flex-end;
   cursor: pointer;
   box-shadow: 0 0.5rem 1rem rgba(177, 228, 177, 0.812);
 }

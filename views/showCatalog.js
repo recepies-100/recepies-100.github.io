@@ -28,7 +28,13 @@ const cardTemp = (card) => html `
           <p class="card-description">
             ${card.description}
           </p>
-          <a href="/details/${card.objectId}" class="card-btn">view reciepe</a>
+          <div class="card-likes">
+            <p class="likes-result">0 <span>likes</span> </p>
+            <p class="link-wrapper">
+
+              <a href="/details/${card.objectId}" class="card-btn">view reciepe</a>
+            </p>
+          </div>
         </div>
       </div>
 `

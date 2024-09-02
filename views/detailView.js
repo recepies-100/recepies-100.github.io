@@ -2,7 +2,7 @@ import { html } from "@lit-html";
 import page from "@page";
 import { deleteReciepe, getReciepeById } from "../data/dataService.js";
 
-const detailsTemp = (data, onDelete) => html`
+const detailsTemp = (data, onDelete, onLike) => html`
   <section class="details">
     <div class="details-container">
       <img class="details-img" src=${data.imageUrl} alt="omlette-img" />
@@ -30,7 +30,7 @@ const detailsTemp = (data, onDelete) => html`
         <a @click=${onDelete} href="javascript:void(0)" id="delete-btn"
           >Delete Reciepe</a
         >
-        <a id="like">Like</a>
+        <a @click=${onLike} href="javascript:void(0)" id="like">Like</a>
       </div>
     </div>
   </section>
@@ -40,7 +40,7 @@ export async function showDetailsView(ctx) {
   const id = ctx.params.id;
   const data = await getReciepeById(id);
 
-  ctx.render(detailsTemp(data, onDelete));
+  ctx.render(detailsTemp(data, onDelete, onLike));
 
   async function onDelete() {
     const confirmation = confirm(
@@ -54,5 +54,10 @@ export async function showDetailsView(ctx) {
     }
 
     page.redirect("/catalog");
+  }
+
+  async function onLike() {
+    console.log('work');
+    
   }
 }
