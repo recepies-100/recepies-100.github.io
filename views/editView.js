@@ -56,6 +56,7 @@ const editTemp = (postData, onEdit) => html`
           placeholder="Preparation Time"
           .value=${postData.prepTime}
       /></label>
+
       <div class="btn-box">
         <button class="edit-btn" id="edit-btn" type="submit">edit</button>
         <button class="cancel-btn" id="cancel-btn" type="submit">cancel</button>

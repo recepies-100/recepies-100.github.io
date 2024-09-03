@@ -2,6 +2,7 @@ import { html } from "@lit-html";
 import page from "@page";
 import { createSubmitHandler } from "../middlewares/submithandler.js";
 import { createRecepi } from "../data/dataService.js";
+import { getUserData } from "../src/storage.js";
 
 const createTemp = (onCreate) => html`
   <section class="create">
@@ -58,16 +59,21 @@ const createTemp = (onCreate) => html`
 `;
 
 export function showCreateView(ctx) {
-  ctx.render(createTemp(createSubmitHandler(onCreate)));
 
+  ctx.render(createTemp(createSubmitHandler(onCreate)));
+  
+  const currentUser = getUserData().objectId
+  
+  
   async function onCreate({
     imageUrl,
     title,
     ingrediance,
     description,
-    prepTime
+    prepTime,
   }) {
-    await createRecepi({ imageUrl, title, ingrediance, description, prepTime });
+
+    await createRecepi({ imageUrl, title, ingrediance, description, prepTime }, currentUser);
     page.redirect("/catalog");
   }
 }

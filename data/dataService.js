@@ -11,14 +11,16 @@ export async function createRecepi({
   title,
   ingrediance,
   description,
-  prepTime
-}) {
+  prepTime,
+  
+}, authorId) {
   return await post(endpoints.getAllRecepies, {
     imageUrl,
     title,
     ingrediance,
     description,
-    prepTime
+    prepTime,
+    owner: { '__type': 'Pointer', 'className': '_User', 'objectId': authorId},
   });
 }
 
