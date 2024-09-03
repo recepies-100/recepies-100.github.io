@@ -59,21 +59,21 @@ const createTemp = (onCreate) => html`
 `;
 
 export function showCreateView(ctx) {
-
   ctx.render(createTemp(createSubmitHandler(onCreate)));
-  
-  const currentUser = getUserData().objectId
-  
-  
+
+  const currentUser = getUserData().objectId;
+
   async function onCreate({
     imageUrl,
     title,
     ingrediance,
     description,
-    prepTime,
+    prepTime
   }) {
-
-    await createRecepi({ imageUrl, title, ingrediance, description, prepTime }, currentUser);
+    await createRecepi(
+      { imageUrl, title, ingrediance, description, prepTime },
+      currentUser
+    );
     page.redirect("/catalog");
   }
 }
